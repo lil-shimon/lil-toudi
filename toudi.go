@@ -5,18 +5,17 @@ import (
 	"time"
 )
 
-type item struct {
-
+type toudi struct {
     Task string
     Done bool
     CreatedAt time.Time
     CompletedAt time.Time
 }
 
-type Toudis []item
+type Toudis []toudi
 
 func (t *Toudis) Add(task string) {
-    todo := item {
+    todo := toudi {
         Task: task,
         Done: false,
         CreatedAt: time.Now(),
