@@ -34,8 +34,14 @@ func main() {
 
 	switch {
 	case *add:
-		toudis.Add("Test")
-		err := toudis.Store(toudisFile)
+		toudi, err := getInput(os.Stdin, flag.Args()...)
+		if err != nil {
+			fmt.Fprintln(os.Stderr, err.Error())
+			os.Exit(1)
+		}
+		toudis.Add(toudi)
+
+		err = toudis.Store(toudisFile)
 		if err != nil {
 			fmt.Fprintln(os.Stderr, err.Error())
 			os.Exit(1)
