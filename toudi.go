@@ -3,6 +3,7 @@ package toudi
 import (
 	"encoding/json"
 	"errors"
+	"fmt"
 	"io/ioutil"
 	"os"
 	"time"
@@ -82,4 +83,10 @@ func (t *Toudis) Store(filename string) error {
 	}
 
 	return ioutil.WriteFile(filename, data, 0644)
+}
+
+func (t *Toudis) Print() {
+	for i, item := range *t {
+		fmt.Printf("%d - %s\n", i, item.Task)
+	}
 }
