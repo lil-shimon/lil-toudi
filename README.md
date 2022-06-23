@@ -1,5 +1,11 @@
 # Toudi
 
+## Build
+```
+git clone https://github.com/lil-shimon/toudi.git
+go build ./cmd/todo
+```
+
 ## Usage
 
 ### List
