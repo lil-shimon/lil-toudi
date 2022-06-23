@@ -20,8 +20,9 @@ func main() {
 
 	add := flag.Bool("add", false, "add a new toudis")
 	complete := flag.Int("complete", 0, "mark a toudis as completed")
-	del := flag.Int("del", 0, "delete a toudis")
+	del := flag.Int("d", 0, "delete a toudis")
 	list := flag.Bool("list", false, "list all toudis")
+	l := flag.Bool("l", false, "list all toudis")
 
 	flag.Parse()
 
@@ -61,6 +62,7 @@ func main() {
 			os.Exit(1)
 		}
 	case *list:
+	case *l:
 		toudis.Print()
 	default:
 		fmt.Fprintln(os.Stdout, "invalid command")

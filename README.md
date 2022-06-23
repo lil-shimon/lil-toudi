@@ -6,6 +6,9 @@
 ```
 ./todo -list
 ```
+```
+./todo -l
+```
 
 ### Add
 ```
@@ -14,7 +17,7 @@
 
 ### remove
 ```
-./todo -del=[todo id]
+./todo -d [todo id]
 ```
 
 ### Change Status
